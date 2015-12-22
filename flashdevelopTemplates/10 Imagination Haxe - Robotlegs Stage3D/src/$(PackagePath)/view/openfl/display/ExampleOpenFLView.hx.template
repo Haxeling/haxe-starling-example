@@ -1,0 +1,27 @@
+package $(PackageDot)view.openfl.display;
+
+import openfl.display.Sprite;
+
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+
+@:rtti
+@:keepSub
+class ExampleOpenFLView extends Sprite
+{
+
+	public function new() 
+	{
+		super();
+		
+	}
+	
+	public function initialize() 
+	{
+		this.graphics.beginFill(0x333333);
+		this.graphics.drawRect(0, 0, 100, 100);
+	}
+	
+}

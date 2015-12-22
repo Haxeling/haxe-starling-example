@@ -1,0 +1,14 @@
+package $(PackageDot)utils.example;
+	
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+
+public class ExampleUtil 
+{
+	public function new() 
+	{
+		
+	}
+}

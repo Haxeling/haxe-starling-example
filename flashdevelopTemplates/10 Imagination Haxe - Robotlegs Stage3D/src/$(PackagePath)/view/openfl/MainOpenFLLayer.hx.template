@@ -1,0 +1,26 @@
+package $(PackageDot)view.openfl;
+
+import $(PackageDot)view.openfl.display.ExampleOpenFLView;
+import openfl.display.Sprite;
+
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+
+@:rtti
+@:keepSub
+class MainOpenFLLayer extends Sprite
+{
+
+	public function new() 
+	{
+		super();
+	}
+	
+	public function initialize() 
+	{
+		var exampleOpenFLView:ExampleOpenFLView = new ExampleOpenFLView();
+		addChild(exampleOpenFLView);
+	}
+}

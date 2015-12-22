@@ -1,0 +1,28 @@
+package $(PackageDot)view.starling.display;
+
+import starling.display.Quad;
+import starling.display.Sprite;
+
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+
+@:rtti
+@:keepSub
+class ExampleStarlingView extends Sprite
+{
+
+	public function new() 
+	{
+		super();
+		
+	}
+	
+	public function initialize() 
+	{
+		var quad:Quad = new Quad(200, 200, 0xAAAAAA);
+		addChild(quad);
+	}
+	
+}

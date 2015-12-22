@@ -1,0 +1,28 @@
+package $(PackageDot)view.openfl.display;
+
+import $(PackageDot)services.example.ExampleService;
+import robotlegs.bender.bundles.mvcs.Mediator;
+
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+
+@:rtti
+@:keepSub
+class ExampleOpenFLViewMediator extends Mediator
+{
+	@inject public var view:ExampleOpenFLView;
+	@inject public var exampleService:ExampleService;
+	
+	public function new() 
+	{
+		
+	}
+	
+	override public function initialize():Void
+	{
+		view.initialize();
+		trace("exampleService = " + exampleService);
+	}
+}

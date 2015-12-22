@@ -1,0 +1,16 @@
+package $(PackageDot)services.example;
+
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+
+@:rtti
+@:keepSub
+class ExampleService 
+{
+	public function new() 
+	{
+		
+	}
+}

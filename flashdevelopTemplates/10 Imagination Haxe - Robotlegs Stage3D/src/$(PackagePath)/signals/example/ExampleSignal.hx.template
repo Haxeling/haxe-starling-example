@@ -1,0 +1,18 @@
+package $(PackageDot)signals.example;
+
+import org.osflash.signals.Signal;
+
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+
+@:rtti
+@:keepSub
+class ExampleSignal extends Signal 
+{
+	public function new() 
+	{
+		
+	}
+}

@@ -1,0 +1,35 @@
+package $(PackageDot)view.away3d;
+
+import $(PackageDot)view.away3d.display.ExampleAwayView;
+import openfl.events.Event;
+import robotlegs.bender.extensions.stage3D.away3d.impl.AwayLayer;
+
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+
+@:rtti
+@:keepSub
+class MainAwayLayer extends AwayLayer 
+{
+	private var exampleAwayView:ExampleAwayView;
+	
+	public function new(profile:String) 
+	{
+		super(profile);
+	}
+	
+	public function initialize():Void 
+	{
+		exampleAwayView = new ExampleAwayView();
+		scene.addChild(exampleAwayView);
+		
+		this.stage.addEventListener(Event.ENTER_FRAME, Update);
+	}
+	
+	private function Update(e:Event):Void 
+	{
+		exampleAwayView.rotationY += 1;
+	}
+}

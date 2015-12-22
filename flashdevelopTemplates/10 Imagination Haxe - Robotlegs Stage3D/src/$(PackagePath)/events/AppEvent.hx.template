@@ -1,0 +1,20 @@
+package $(PackageDot)events;
+
+import openfl.events.Event;
+
+/**
+$(CBI)* ...
+$(CBI)* @author $(DefaultUser)
+$(CBI)*/
+
+class AppEvent extends Event
+{
+	static public var INIT:String = "init";
+
+	public function new(type:String, bubbles:Bool=false, cancelable:Bool=false) 
+	{
+		super(type, bubbles, cancelable);
+		
+	}
+	
+}
