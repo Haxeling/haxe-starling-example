@@ -1,4 +1,4 @@
-package com.imagination.interoperation.view.away3d;
+package com.imagination.interoperation.view.away3d.cubes;
 
 import robotlegs.bender.bundles.mvcs.Mediator;
 import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
@@ -10,9 +10,9 @@ import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
 
 @:rtti
 @:keepSub
-class MainAwayLayerMediator extends Mediator 
+class CubesMediator extends Mediator 
 {
-	@inject public var view:MainAwayLayer;
+	@inject public var view:Cubes;
 	@inject public var mediatorMap:IMediatorMap;
 	
 	public function new() 

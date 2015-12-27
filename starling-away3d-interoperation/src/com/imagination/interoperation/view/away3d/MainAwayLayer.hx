@@ -1,11 +1,12 @@
 package com.imagination.interoperation.view.away3d;
 
+import away3d.cameras.lenses.PerspectiveLens;
 import away3d.core.managers.Stage3DProxy;
 import away3d.entities.Mesh;
 import away3d.materials.ColorMaterial;
 import away3d.primitives.CubeGeometry;
 import away3d.primitives.PlaneGeometry;
-import com.imagination.interoperation.view.away3d.display.ExampleAwayObject;
+import com.imagination.interoperation.view.away3d.cubes.Cubes;
 import openfl.events.Event;
 import robotlegs.bender.extensions.stage3D.away3d.impl.AwayLayer;
 
@@ -18,7 +19,8 @@ import robotlegs.bender.extensions.stage3D.away3d.impl.AwayLayer;
 @:keepSub
 class MainAwayLayer extends AwayLayer 
 {
-	var exampleAwayObject:ExampleAwayObject;
+	var cubes:Cubes;
+	
 	public function new(profile:String) 
 	{
 		super(profile);
@@ -26,25 +28,17 @@ class MainAwayLayer extends AwayLayer
 	
 	public function initialize():Void 
 	{
-		exampleAwayObject = new ExampleAwayObject();
-		scene.addChild(exampleAwayObject);
+		cubes = new Cubes();
+		scene.addChild(cubes);
 		
-		/*var geo:CubeGeometry = new CubeGeometry(600, 500, 500);
-		var material:ColorMaterial = new ColorMaterial(0xFF00FF);
-		var mesh:Mesh = new Mesh(geo, material);
-		mesh.rotationX = 45;
-		scene.addChild(mesh);*/
-		
-		//trace("numChildren = " + scene.numChildren);
-		//trace("initialize numTriangles = " + this.entityCollector.numTriangles);
-		//this.render();
+		cast(camera.lens, PerspectiveLens).fieldOfView = 60;
 		
 		this.stage.addEventListener(Event.ENTER_FRAME, Update);
 	}
 	
 	private function Update(e:Event):Void 
 	{
-		exampleAwayObject.update();
+		cubes.update();
 	}
 	
 	override public function process():Void

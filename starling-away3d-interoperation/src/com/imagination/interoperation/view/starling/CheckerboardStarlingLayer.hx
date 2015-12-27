@@ -26,7 +26,9 @@ class CheckerboardStarlingLayer extends StarlingLayer
 	public function initialize():Void 
 	{
 		var landscape:BitmapData = Assets.getBitmapData("img/landscape.jpg");
-		var image:Image = new Image(Texture.fromBitmapData(landscape));
+		var texture:Texture = Texture.fromBitmapData(landscape);
+		var image:Image = new Image(texture);
+		image.width = 1000;
 		addChild(image);
 	}
 }

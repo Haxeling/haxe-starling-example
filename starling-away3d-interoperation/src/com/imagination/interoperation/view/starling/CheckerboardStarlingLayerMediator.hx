@@ -16,6 +16,7 @@ class CheckerboardStarlingLayerMediator extends Mediator
 	
 	override public function initialize():Void
 	{
+		trace("CheckerboardStarlingLayerMediator");
 		view.initialize();
 	}
 }

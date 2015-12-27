@@ -8,7 +8,7 @@
 	<!-- output -->
 	<app main="com.imagination.interoperation.Main" file="Away3dStarlingInteroperation" path="bin" />
 	
-	<window width="800" height="450" 
+	<window width="800" height="432" 
 		orientation="landscape" 
 		vsync="true" fps="60" 
 		hardware="true" 

@@ -47,7 +47,7 @@ class MainStarlingLayer extends StarlingLayer
 	{
 		var frames:Vector<Texture> = assets.getTextures("flight");
 		mMovies = new Vector<MovieClip>();
-		var num:Int = 8;
+		var num:Int = 10;
 		for (i in 0...num) 
 		{
 			var t:Float = i / num;
@@ -55,6 +55,7 @@ class MainStarlingLayer extends StarlingLayer
 			mMovie.currentFrame = Math.floor(frames.length * Math.random());
 			mMovie.y = -30 + (t * 460);
 			mMovie.x = (i * (350 + (Math.random() * 50))) % 960;
+			mMovie.scaleX = mMovie.scaleY = 0.6;
 			addChild(mMovie);
 			Starling.current.juggler.add(mMovie);
 			
