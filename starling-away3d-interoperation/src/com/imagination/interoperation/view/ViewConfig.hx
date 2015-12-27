@@ -7,6 +7,7 @@ import com.imagination.interoperation.view.away3d.MainAwayLayer;
 import com.imagination.interoperation.view.away3d.MainAwayLayer2;
 import com.imagination.interoperation.view.away3d.MainAwayLayerMediator;
 import com.imagination.interoperation.view.away3d.MainAwayLayerMediator2;
+import com.imagination.interoperation.view.openfl.MainView;
 import com.imagination.interoperation.view.starling.CheckerboardStarlingLayer;
 import com.imagination.interoperation.view.starling.CheckerboardStarlingLayerMediator;
 import com.imagination.interoperation.view.starling.MainStarlingLayer;
@@ -77,5 +78,7 @@ class ViewConfig implements IConfig
 		stack.addLayer(MainAwayLayer);
 		stack.addLayer(MainStarlingLayer);
 		stack.addLayer(MainAwayLayer2);
+		
+		contextView.view.addChild(new MainView());
 	}
 }
